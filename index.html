@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lite PDF Merger</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding: 2rem; }
+    input { margin: 1rem; }
+    button { padding: 0.5rem 1rem; font-size: 1rem; }
+  </style>
+</head>
+<body>
+  <h1>Lite PDF Merger</h1>
+  <input type="file" id="file1" accept="application/pdf" />
+  <input type="file" id="file2" accept="application/pdf" /><br />
+  <button onclick="mergePDFs()">Merge PDFs</button>
+
+  <script src="pdf-lib.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
