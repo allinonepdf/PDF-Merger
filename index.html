@@ -2,21 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lite PDF Merger</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PDF Tools - Home</title>
   <style>
-    body { font-family: sans-serif; text-align: center; padding: 2rem; }
-    input { margin: 1rem; }
-    button { padding: 0.5rem 1rem; font-size: 1rem; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f8f9fa;
+      text-align: center;
+      padding: 2rem;
+    }
+    h1 {
+      color: #343a40;
+    }
+    .tools {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .tool {
+      background: white;
+      padding: 1rem 2rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      width: 200px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      transition: 0.3s;
+    }
+    .tool:hover {
+      background: #007bff;
+      color: white;
+      transform: scale(1.05);
+    }
   </style>
 </head>
 <body>
-  <h1>Lite PDF Merger</h1>
-  <input type="file" id="file1" accept="application/pdf" />
-  <input type="file" id="file2" accept="application/pdf" /><br />
-  <button onclick="mergePDFs()">Merge PDFs</button>
+  <h1>Welcome to PDF Tools</h1>
+  <p>Select a tool below:</p>
 
-  <script src="pdf-lib.min.js"></script>
-  <script src="script.js"></script>
+  <div class="tools">
+    <a href="merge.html" class="tool">Merge PDFs</a>
+    <a href="#" class="tool">Split PDFs</a>
+    <a href="#" class="tool">Protect PDF</a>
+    <a href="#" class="tool">PDF to Word</a>
+    <a href="#" class="tool">Image to PDF</a>
+    <a href="#" class="tool">Compress PDF</a>
+  </div>
 </body>
 </html>
