@@ -1,28 +1,66 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lite PDF Tools</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lite PDF Tools - Vijay Malviya 2025</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- pdf-lib CDN -->
+    <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
 </head>
 <body>
-  <video autoplay muted loop id="bg-video">
-    <source src="background.mp4" type="video/mp4">
-  </video>
-  <div class="navbar">
-    <button class="active">Merge</button>
-    <button>Split</button>
-    <button>Compress</button>
-    <button>Protect</button>
-    <button>Image to PDF</button>
-  </div>
-  <div class="card">
-    <h2>Merge PDFs</h2>
-    <input type="file" multiple>
-    <button class="action">Merge and Download</button>
-  </div>
-  <footer>© Vijay Malviya 2025</footer>
+    <header>
+        <h1>Lite PDF Tools</h1>
+        <nav>
+            <button class="tab-button active" data-tab="merge">Merge</button>
+            <button class="tab-button" data-tab="split">Split</button>
+            <button class="tab-button" data-tab="compress">Compress</button>
+            <button class="tab-button" data-tab="protect">Protect</button>
+            <button class="tab-button" data-tab="convert">Image to PDF</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="merge" class="tab-content active">
+            <h2>Merge PDFs</h2>
+            <input type="file" id="merge-files" multiple accept="application/pdf" />
+            <button id="merge-btn">Merge and Download</button>
+        </section>
+
+        <section id="split" class="tab-content">
+            <h2>Split PDF</h2>
+            <input type="file" id="split-file" accept="application/pdf" />
+            <label for="split-pages">Pages to extract (e.g., 1-3,5):</label>
+            <input type="text" id="split-pages" placeholder="1-3,5" />
+            <button id="split-btn">Split and Download</button>
+        </section>
+
+        <section id="compress" class="tab-content">
+            <h2>Compress PDF</h2>
+            <input type="file" id="compress-file" accept="application/pdf" />
+            <button id="compress-btn">Compress and Download</button>
+            <p class="note">Basic compression by removing metadata. For better compression use dedicated tools.</p>
+        </section>
+
+        <section id="protect" class="tab-content">
+            <h2>Protect PDF with Password</h2>
+            <input type="file" id="protect-file" accept="application/pdf" />
+            <input type="password" id="protect-password" placeholder="Enter password" />
+            <button id="protect-btn">Protect and Download</button>
+            <p class="note">Uses basic encryption, works on most PDF readers.</p>
+        </section>
+
+        <section id="convert" class="tab-content">
+            <h2>Convert Images to PDF</h2>
+            <input type="file" id="convert-files" multiple accept="image/png, image/jpeg" />
+            <button id="convert-btn">Convert and Download PDF</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>© Vijay Malviya 2025</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
