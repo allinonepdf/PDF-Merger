@@ -3,32 +3,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Lite PDF Tools</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="video-background">
-    <video autoplay muted loop id="bgVideo">
-      <source src="background.mp4" type="video/mp4" />
-    </video>
+  <video autoplay muted loop id="bg-video">
+    <source src="background.mp4" type="video/mp4">
+  </video>
+  <div class="navbar">
+    <button class="active">Merge</button>
+    <button>Split</button>
+    <button>Compress</button>
+    <button>Protect</button>
+    <button>Image to PDF</button>
   </div>
-  <div class="content">
-    <nav>
-      <button class="active">Merge</button>
-      <button>Split</button>
-      <button>Compress</button>
-      <button>Protect</button>
-      <button>Image to PDF</button>
-    </nav>
-    <main>
-      <section class="tool-card">
-        <h2>Merge PDFs</h2>
-        <input type="file" multiple />
-        <button>Merge and Download</button>
-      </section>
-    </main>
-    <footer>© Vijay Malviya 2025</footer>
+  <div class="card">
+    <h2>Merge PDFs</h2>
+    <input type="file" multiple>
+    <button class="action">Merge and Download</button>
   </div>
+  <footer>© Vijay Malviya 2025</footer>
 </body>
 </html>
